@@ -10,16 +10,16 @@ def books_by_author(author_name):
 
 # 2. List all books in a library
 def books_in_library(library_name):
-    library = Library.objects.get(name=library_name)
-    books = library.books.all()
+    Library = Library.objects.get(name=library_name)
+    books = Library.books.all()
     print(f"Books in the library {library_name}:")
     for book in books:
         print(f"- {book.title}")
 
 # 3. Retrieve the librarian for a library
 def librarian_for_library(library_name):
-    library = Library.objects.get(name=library_name)
-    librarian = Librarian.objects.get(library=library)
+    Library = Library.objects.get(name=library_name)
+    librarian = Librarian.objects.get(Library=Library)
     print(f"The librarian for {library_name} is {librarian.name}")
 
 # Test the queries

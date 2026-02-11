@@ -1,1 +1,1 @@
-hi this is the first django project
+This is my readme file.
